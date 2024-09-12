@@ -72,9 +72,9 @@
 #define CONFIG_ATOMICS
 #endif
 
-#if !defined(EMSCRIPTEN)
-/* enable stack limitation */
-#define CONFIG_STACK_CHECK
+#if defined(EMSCRIPTEN)
+/* disable stack limitation */
+#define CONFIG_NO_STACK_CHECK
 #endif
 
 
@@ -1596,7 +1596,7 @@ static void set_dummy_numeric_ops(JSNumericOperations *ops)
     ops->mul_pow10 = invalid_mul_pow10;
 }
 
-#if !defined(CONFIG_STACK_CHECK)
+#if defined(CONFIG_NO_STACK_CHECK)
 /* no stack limitation */
 static inline uintptr_t js_get_stack_pointer(void)
 {

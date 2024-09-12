@@ -22,3 +22,14 @@ unicode
 unicode_gen
 run_octane
 run_sunspider_like
+.idea/
+*.dll
+*.exe
+*.def
+*.exp
+*.lib
+CMakeFiles/
+*.so
+CMakeCache.txt
+*.cmake
+build/
