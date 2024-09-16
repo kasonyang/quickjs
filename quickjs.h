@@ -998,6 +998,8 @@ static inline JSValue JS_NewCFunctionMagic(JSContext *ctx, JSCFunctionMagic *fun
 void JS_SetConstructor(JSContext *ctx, JSValueConst func_obj,
                        JSValueConst proto);
 
+void print_trace_stack(JSContext *ctx);
+
 /* C property definition */
 
 typedef struct JSCFunctionListEntry {
